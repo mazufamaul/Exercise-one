@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 13</title>
+
+    <style> 
+        P{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-family: Arial;
+        }
+
+        .pembungkus1{
+            display: flex;
+            width: 400px;
+            flex-direction: column;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .all-inbox{
+            margin-top: 10px;
+            margin-left: 15px;
+            margin-bottom: 10px;
+           
+        }
+
+        .inbox{
+            font-size: 14px;
+            color: gray;
+        }
+
+        .profilcat{
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+            margin-right: 5px;
+        }
+
+        .cat{
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .pembungkus2{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+            
+           
+           
+        }
+
+        .info-cat{
+            width: 300px;
+           
+        }
+
+        .row{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2px;
+        }
+        
+        .name{
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .time{
+            font-size: 14px;
+            color: grey;
+        }
+
+
+        .sale{
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .info-sale{
+            font-size: 14px;
+            color: grey;
+        }
+
+        /* latihan buat kartu */
+        
+        .flexkartu{
+            display: flex;
+            width: 500px;
+            flex-direction: column;
+            background-color: antiquewhite;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin-bottom: 30px;
+        }
+
+        .atas{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+            background-color: white;
+        }
+
+        .kiri{
+            width: 80px;
+            margin-left: 10px;
+        }
+
+        .upn{
+            width: 70px;
+            height: 70px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .middle{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .kanan{
+            width: 80px;
+            
+
+        }
+
+        .tutwuri{
+            width: 70px;
+            height: 70px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .tengah{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+    
+        .fotomerah{
+            width: 70px;
+            height: 70px;
+            border-radius: 4px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+
+        .bawah{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: white;
+        }
+
+        .barcode{
+            width: 150px;
+        }
+
+        .tandatangan{
+            width: 150px;
+        }
+
+
+
+        .identitas{
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+            
+            
+        }
+
+        .tabel{
+            width: 100px;
+           
+        }
+
+        body{
+            height: 1000px;
+        }
+
+        /* latihan kucing tweeter */
+
+        .pembungkus3{
+            display: flex;
+            width: 450px;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+            flex: 1;
+            flex-direction: row;
+            margin-bottom: 20px;
+           
+        }
+
+        .row1{
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 70px;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        .wadah-tweet-kucing{
+            width: 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cat-tweet{
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            object-fit: cover;
+        }
+
+
+        .row2{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .kolom1{
+            margin-top: 10px;
+            width: 300px;
+            margin-bottom: 15px;
+        }
+
+        .kolom2{
+            display: flex;
+            width: 320px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            flex-direction: row;
+            border: 1px solid rgb(185, 184, 184);
+            cursor: pointer;
+        }
+
+        .kiri-kolom2{
+            background-color: rgb(185, 184, 184);
+            width: 100px;
+            border-radius: 8px 0px 0px 8px;
+            
+        }
+
+        .kanan-kolom2{
+            width: 300px;
+        }
+
+        .dalem-kanan-kolom{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .video-info,.simpeldev{
+           line-height: 20px;
+        }
+
+        .simpeldev{
+           font-size: 15px; 
+           font-weight: bold;
+        }
+        
+        .gmail{
+            font-weight: normal;
+            color: grey;
+
+        }
+
+        .video-info{
+            font-size: 15px;
+            width: 340px;
+        }
+
+        .yt{
+            font-size: 15px;
+            color: grey;
+            line-height: 20px;
+        }
+
+        .backend{
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+        .bungkusbawah{
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+<!-- flex box kucing rapih clear -->
+
+    <div class="pembungkus1">
+        <div class="all-inbox">
+            <p class="inbox">All INBOXES</p>
+        </div>
+
+        <div class="pembungkus2">
+
+            <div class="profilcat">
+                <img class="cat" src="thumbnail/cat.jpg">
+            </div>
+
+            <div class="info-cat">
+
+                <div class="row">
+                    <p class="name">Chewy Promotion</p>
+                    <p class="time">4:58 Pm</p>
+                </div>
+
+                <p class="sale">Biggest sale of the year &#33; </p>
+                <p class="info-sale">Hey there We're writing to tell you about our..</p>
+
+            </div>
+        </div>
+
+
+        <div class="pembungkus2">
+
+            <div class="profilcat">
+                <img class="cat" src="thumbnail/rex.jpg">
+            </div>
+
+            <div class="info-cat">
+
+                <div class="row">
+                    <p class="name">Best Buy</p>
+                    <p class="time">12:32 Pm</p>
+                </div>
+
+                <p class="sale">Your Best Buy eReceipt </p>
+                <p class="info-sale">Thank you for shopping at Best Buy,here is..</p>
+
+            </div>
+        </div>
+
+
+        <div class="pembungkus2">
+
+            <div class="profilcat">
+                <img class="cat" src="thumbnail/mimi.jpg">
+            </div>
+
+            <div class="info-cat">
+
+                <div class="row">
+                    <p class="name">Netflix</p>
+                    <p class="time">9:00 Am</p>
+                </div>
+
+                <p class="sale">Here's what's coming soon to netflix </p>
+                <p class="info-sale">Brand new movies and shows, old favorites..</p>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <br><br><br>
+    <!-- kartu nama -->
+
+    <div class="flexkartu">
+
+        <div class="atas">
+            <div class="kiri">
+                <img class="upn" src="thumbnail/logoupn.webp">
+            </div>
+
+            <div class="middle">
+                <p>Kartu Pelajar</p>
+                <P>Upn Jakarta</P>
+                <p>Fatmawati, depok</p>
+            </div>
+
+            <div class="kanan">
+                <img class="tutwuri" src="thumbnail/wuri.png">
+            </div>
+        </div>
+
+
+
+        <div class="tengah">
+
+            <div class="foto">
+                <img class="fotomerah" src="thumbnail/channel-2.jpeg">
+            </div>
+
+            <div class="identitas">
+
+                <div class="tabel">
+                    <p>Nama </p>
+                    <p>Nim  </p>
+                    <p>Kelas</p>
+                    <p>Jurusan</p>
+                </div>
+
+                <div class="value">
+                    <p>:Muhammad Niggaru</p>
+                    <p>:2109489654</p>
+                    <p>:A</p>
+                    <P>:Networking</P>
+                </div>
+  
+            </div>
+
+        </div>
+
+
+
+        <div class="bawah">
+
+            <div class="barcode">
+                <img class="barcode" src="thumbnail/barcode.png" alt="">
+            </div>
+
+            <div class="tandatangan">
+                <img class="tandatangan" src="thumbnail/tandatangan2.jpg" >
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- latihan kucing tweeter -->
+
+    <div class="pembungkus3">
+
+        <div class="row1">
+            <div class="wadah-tweet-kucing">
+                <img class="cat-tweet" src="thumbnail/cat.jpg" >
+            </div>
+        </div>
+
+        <div class="row2">
+
+            <div class="kolom1">
+                
+                    <p class="simpeldev">supersimple.dev <span class="gmail">@SuperSimpleDev</span></p>
+                    <p class="video-info">What is backend web development? A compete
+                    overview. New video is up 
+                    </p>
+               
+            </div>
+
+            <div class="kolom2">
+
+                <div class="kiri-kolom2">
+                    <p></p>
+                </div>
+
+                <div class="kanan-kolom2">
+                    <div class="dalem-kanan-kolom">
+                        <div class="bungkusbawah">
+                            <p class="yt">youtube.com</p>
+                            <p class="backend">Backend web development - a
+                             compete overview (2021)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pembungkus3">
+
+        <div class="row1">
+            <div class="wadah-tweet-kucing">
+                <img class="cat-tweet" src="thumbnail/messi.jpg" >
+            </div>
+        </div>
+
+        <div class="row2">
+
+            <div class="kolom1">
+                <p class="simpeldev">Lionel Messi<span class="gmail"> @Lionel messi</span></p>
+                <p class="video-info">This is the trick how to get world champion be easy 
+                </p>
+            </div>
+
+            <div class="kolom2">
+
+                <div class="kiri-kolom2">
+                    <p></p>
+                </div>
+
+                <div class="kanan-kolom2">
+
+                    <div class="dalem-kanan-kolom">
+                        <div class="bungkusbawah">
+                            <p class="yt">youtube.com </p>
+                            <p class="backend">Rosario stadium - messi
+                            interview and told how to succes about dream (2023) 
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>
